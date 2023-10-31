@@ -1,0 +1,21 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    - prefer_single_quotes
+    - cancel_subscriptions
+    - close_sinks
+    - prefer_final_in_for_each
+
+analyzer:
+  errors:
+    todo: warning
+    missing_return: error
+    dead_code: error
+    invalid_annotation_target: ignore
+    prefer_single_quotes: warning
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.gr.dart"
+    - "**/*.freezed.dart"
+    - "**/*.mocks.dart"
