@@ -57,3 +57,6 @@ app.*.map.json
 *.gr.dart
 *.g.dart
 *.freezed.dart
+
+# FVM Version Cache
+.fvm/
