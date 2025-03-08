@@ -24,7 +24,7 @@ dependencies:
   talker: ^3.1.4
   reactive_forms: ^16.1.1
   yaru_widgets: ^3.2.2
-  file_picker: ^6.0.0
+  file_picker: ^9.0.0
   flutter_staggered_grid_view: ^0.7.0
   path: ^1.8.3
 
