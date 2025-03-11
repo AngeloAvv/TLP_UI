@@ -35,7 +35,7 @@ dev_dependencies:
   bloc_test: ^9.1.5
   auto_route_generator: ^7.3.2
   build_runner: ^2.4.6
-  freezed: ^2.4.5
+  freezed: ^3.0.0
   mockito: ^5.4.2
   mocktail: ^1.0.1
   data_fixture_dart: ^2.2.0
