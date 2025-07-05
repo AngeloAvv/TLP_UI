@@ -838,10 +838,10 @@ packages:
     dependency: "direct main"
     description:
       name: reactive_forms
-      sha256: b7d64d8fe45c19f506c762e219f4c6a3bdcfc4842d6fba98f866be5fca75d8e5
+      sha256: "4c8fe71f21ac88996c01a56fe19ea5ec39b47292cb07f99a467e1bb977136a98"
       url: "https://pub.dev"
     source: hosted
-    version: "16.1.1"
+    version: "18.1.1"
   rxdart:
     dependency: transitive
     description:
