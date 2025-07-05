@@ -6,8 +6,9 @@ import 'package:tlp_ui/app.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  final storageDirectory = await getTemporaryDirectory();
   HydratedBloc.storage = await HydratedStorage.build(
-    storageDirectory: await getTemporaryDirectory(),
+    storageDirectory: HydratedStorageDirectory(storageDirectory.path),
   );
 
   runApp(App());

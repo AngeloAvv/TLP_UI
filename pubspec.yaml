@@ -14,7 +14,7 @@ dependencies:
   auto_route: ^10.0.0
   flutter_bloc: ^9.0.0
   freezed_annotation: ^3.0.0
-  hydrated_bloc: ^9.1.2
+  hydrated_bloc: ^10.0.0
   intl: any
   path_provider: ^2.1.1
   provider: ^6.0.5
@@ -32,7 +32,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
-  bloc_test: ^9.1.5
+  bloc_test: ^10.0.0
   auto_route_generator:
   build_runner: ^2.4.6
   freezed:
