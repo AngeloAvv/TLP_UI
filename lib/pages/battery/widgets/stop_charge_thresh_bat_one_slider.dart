@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_essentials_kit/flutter_essentials_kit.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:reactive_forms/reactive_forms.dart';
+import 'package:tlp_ui/features/localization/extensions/build_context.dart';
 import 'package:tlp_ui/widgets/reactive_fields/reactive_yaru_slider.dart';
 
 class StopChargeThreshBatOneSlider extends ReactiveYaruSlider {
@@ -10,15 +10,14 @@ class StopChargeThreshBatOneSlider extends ReactiveYaruSlider {
     super.key,
     required super.formControlName,
   }) : super(
-          title: Text(AppLocalizations.of(context)
-                  ?.label_stop_charge_thresh_battery_one ??
+          title: Text(context.l10n?.label_stop_charge_thresh_battery_one ??
               'label_stop_charge_thresh_battery_one'),
-          subtitle: Text(AppLocalizations.of(context)
-                  ?.label_stop_charge_thresh_battery_one_subtitle ??
-              'label_stop_charge_thresh_battery_one_subtitle'),
-          headline: Text(AppLocalizations.of(context)
-                  ?.label_stop_charge_thresh_battery_one_headline ??
-              'label_stop_charge_thresh_battery_one_headline'),
+          subtitle: Text(
+              context.l10n?.label_stop_charge_thresh_battery_one_subtitle ??
+                  'label_stop_charge_thresh_battery_one_subtitle'),
+          headline: Text(
+              context.l10n?.label_stop_charge_thresh_battery_one_headline ??
+                  'label_stop_charge_thresh_battery_one_headline'),
         );
 
   @override

@@ -12,7 +12,7 @@ TLP’s default settings are already optimized for battery life and implement Po
 recommendations out of the box. So you may just install and forget it.
 Nevertheless TLP is highly customizable to fulfil your specific requirements.
 
-[![Flutter CI](https://github.com/AngeloAvv/TLP_UI/actions/workflows/main.yml/badge.svg)](https://github.com/AngeloAvv/TLP_UI/actions/workflows/main.yml)
+[![Flutter CI](https://github.com/AngeloAvv/TLP_UI/actions/workflows/default.yml/badge.svg)](https://github.com/AngeloAvv/TLP_UI/actions/workflows/default.yml)
 [![Star on GitHub](https://img.shields.io/github/stars/AngeloAvv/TLP_UI.svg?style=flat&logo=github&colorB=deeppink&label=stars)](https://github.com/AngeloAvv/TLP_UI)
 [![License: GPL](https://img.shields.io/badge/license-GPL-purple.svg)](https://opensource.org/licenses/GPL-3.0)
 [![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/AngeloAvv)

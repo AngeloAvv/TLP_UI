@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reactive_forms/reactive_forms.dart';
-import 'package:yaru_widgets/widgets.dart';
+import 'package:yaru/yaru.dart';
 
 class ReactiveYaruTextField extends StatelessWidget {
   final Widget? headline;
@@ -9,7 +9,8 @@ class ReactiveYaruTextField extends StatelessWidget {
   final String formControlName;
   final bool dense;
 
-  const ReactiveYaruTextField(BuildContext context, {
+  const ReactiveYaruTextField(
+    BuildContext context, {
     super.key,
     this.headline,
     required this.title,

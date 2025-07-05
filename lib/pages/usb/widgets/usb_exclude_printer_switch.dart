@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:reactive_forms/reactive_forms.dart';
+import 'package:tlp_ui/features/localization/extensions/build_context.dart';
 import 'package:tlp_ui/widgets/reactive_fields/reactive_yaru_switch_list_tile.dart';
 
 class USBExcludePrinterSwitch extends ReactiveYaruSwitchListTile<String> {
@@ -9,13 +9,11 @@ class USBExcludePrinterSwitch extends ReactiveYaruSwitchListTile<String> {
     super.key,
     required super.formControlName,
   }) : super(
-          title: Text(AppLocalizations.of(context)?.label_usb_exclude_printer ??
+          title: Text(context.l10n?.label_usb_exclude_printer ??
               'label_usb_exclude_printer'),
-          subtitle: Text(AppLocalizations.of(context)
-                  ?.label_usb_exclude_printer_subtitle ??
+          subtitle: Text(context.l10n?.label_usb_exclude_printer_subtitle ??
               'label_usb_exclude_printer_subtitle'),
-          headline: Text(AppLocalizations.of(context)
-                  ?.label_usb_exclude_printer_headline ??
+          headline: Text(context.l10n?.label_usb_exclude_printer_headline ??
               'label_usb_exclude_printer_headline'),
         );
 

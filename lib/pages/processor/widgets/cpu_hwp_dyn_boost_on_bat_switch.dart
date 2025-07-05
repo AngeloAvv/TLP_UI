@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:reactive_forms/reactive_forms.dart';
+import 'package:tlp_ui/features/localization/extensions/build_context.dart';
 import 'package:tlp_ui/widgets/reactive_fields/reactive_yaru_switch_list_tile.dart';
 
 class CpuHwpDynBoostOnBatSwitch extends ReactiveYaruSwitchListTile<String> {
@@ -9,15 +9,14 @@ class CpuHwpDynBoostOnBatSwitch extends ReactiveYaruSwitchListTile<String> {
     super.key,
     required super.formControlName,
   }) : super(
-          title: Text(
-              AppLocalizations.of(context)?.label_hwp_dyn_boost_on_battery ??
-                  'label_hwp_dyn_boost_on_battery'),
-          subtitle: Text(AppLocalizations.of(context)
-                  ?.label_hwp_dyn_boost_on_battery_subtitle ??
-              'label_hwp_dyn_boost_on_battery_subtitle'),
-          headline: Text(AppLocalizations.of(context)
-                  ?.label_hwp_dyn_boost_on_battery_headline ??
-              'label_hwp_dyn_boost_on_battery_headline'),
+          title: Text(context.l10n?.label_hwp_dyn_boost_on_battery ??
+              'label_hwp_dyn_boost_on_battery'),
+          subtitle: Text(
+              context.l10n?.label_hwp_dyn_boost_on_battery_subtitle ??
+                  'label_hwp_dyn_boost_on_battery_subtitle'),
+          headline: Text(
+              context.l10n?.label_hwp_dyn_boost_on_battery_headline ??
+                  'label_hwp_dyn_boost_on_battery_headline'),
         );
 
   @override

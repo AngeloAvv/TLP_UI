@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:tlp_ui/features/localization/extensions/build_context.dart';
 import 'package:tlp_ui/widgets/reactive_fields/reactive_yaru_toggle_buttons.dart';
 
 class MemSleepOnAcSelector extends ReactiveYaruToggleButtons<String> {
@@ -8,19 +8,16 @@ class MemSleepOnAcSelector extends ReactiveYaruToggleButtons<String> {
     super.key,
     required super.formControlName,
   }) : super(
-          title: Text(AppLocalizations.of(context)?.label_mem_sleep_on_ac ??
-              'label_mem_sleep_on_ac'),
-          headline: Text(
-              AppLocalizations.of(context)?.label_mem_sleep_on_ac_headline ??
-                  'label_mem_sleep_on_ac_headline'),
-          subtitle: Text(
-              AppLocalizations.of(context)?.label_mem_sleep_on_ac_subtitle ??
-                  'label_mem_sleep_on_ac_subtitle'),
+          title: Text(
+              context.l10n?.label_mem_sleep_on_ac ?? 'label_mem_sleep_on_ac'),
+          headline: Text(context.l10n?.label_mem_sleep_on_ac_headline ??
+              'label_mem_sleep_on_ac_headline'),
+          subtitle: Text(context.l10n?.label_mem_sleep_on_ac_subtitle ??
+              'label_mem_sleep_on_ac_subtitle'),
           children: {
-            Text(AppLocalizations.of(context)?.label_idle_standby ??
-                'label_idle_standby'): 's2idle',
-            Text(AppLocalizations.of(context)?.label_deep ?? 'label_deep'):
-                'deep',
+            Text(context.l10n?.label_idle_standby ?? 'label_idle_standby'):
+                's2idle',
+            Text(context.l10n?.label_deep ?? 'label_deep'): 'deep',
           },
         );
 }

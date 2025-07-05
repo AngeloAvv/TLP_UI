@@ -44,6 +44,7 @@ app.*.map.json
 /android/app/release
 
 # Generated sources
+**/app_localizations*.dart
 **/*.g.dart
 **/*.gr.dart
 **/*.freezed.dart
@@ -53,10 +54,6 @@ app.*.map.json
 
 # Mason related
 /.mason/
-
-*.gr.dart
-*.g.dart
-*.freezed.dart
 
 # FVM Version Cache
 .fvm/

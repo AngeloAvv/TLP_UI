@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:reactive_forms/reactive_forms.dart';
+import 'package:tlp_ui/features/localization/extensions/build_context.dart';
 import 'package:tlp_ui/misc/defaults.dart';
 import 'package:tlp_ui/pages/usb/widgets/usb_allowlist_field.dart';
 import 'package:tlp_ui/pages/usb/widgets/usb_autosuspend_disable_on_shutdown_switch.dart';
@@ -32,7 +32,7 @@ class USBPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Text(
-                  AppLocalizations.of(context)?.title_usb ?? 'title_usb',
+                  context.l10n?.title_usb ?? 'title_usb',
                   style: Theme.of(context).textTheme.displaySmall,
                 ),
               ),

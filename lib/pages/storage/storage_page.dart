@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:reactive_forms/reactive_forms.dart';
+import 'package:tlp_ui/features/localization/extensions/build_context.dart';
 import 'package:tlp_ui/features/routing/app_router.dart';
 
 /// Enter the Storage documentation here
@@ -29,12 +29,8 @@ class StoragePage extends StatelessWidget {
             bottom: TabBar(
               controller: controller,
               tabs: [
-                Tab(
-                    text: AppLocalizations.of(context)?.title_disks ??
-                        'title_disks'),
-                Tab(
-                    text: AppLocalizations.of(context)?.title_filesystem ??
-                        'title_filesystem'),
+                Tab(text: context.l10n?.title_disks ?? 'title_disks'),
+                Tab(text: context.l10n?.title_filesystem ?? 'title_filesystem'),
               ],
             ),
           ),

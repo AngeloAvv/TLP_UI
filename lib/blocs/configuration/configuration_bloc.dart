@@ -8,9 +8,7 @@ import 'package:tlp_ui/models/tlp_configuration/tlp_configuration.dart';
 import 'package:tlp_ui/repositories/configuration_repository.dart';
 
 part 'configuration_bloc.freezed.dart';
-
 part 'configuration_event.dart';
-
 part 'configuration_state.dart';
 
 /// The ConfigurationBloc
@@ -80,7 +78,8 @@ class ConfigurationBloc extends Bloc<ConfigurationEvent, ConfigurationState> {
     emit(const ConfigurationState.saving());
 
     try {
-      final configuration = await configurationRepository.save(event.configuration, path: event.path);
+      final configuration = await configurationRepository
+          .save(event.configuration, path: event.path);
       emit(ConfigurationState.saved(configuration));
     } on LocalizedError catch (error) {
       emit(ConfigurationState.errorSaving(error));
