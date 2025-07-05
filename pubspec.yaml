@@ -21,7 +21,7 @@ dependencies:
   flutter_essentials_kit: ^2.4.0
   font_awesome_flutter: ^10.6.0
   equatable: ^2.0.5
-  talker: ^3.1.4
+  talker: ^4.0.0
   reactive_forms: ^16.1.1
   yaru_widgets: ^3.2.2
   file_picker: ^10.0.0
