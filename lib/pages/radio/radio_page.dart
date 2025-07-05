@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:reactive_forms/reactive_forms.dart';
+import 'package:tlp_ui/features/localization/extensions/build_context.dart';
 import 'package:tlp_ui/features/routing/app_router.dart';
 
 /// Enter the Radio documentation here
@@ -30,11 +30,10 @@ class RadioPage extends StatelessWidget {
               controller: controller,
               tabs: [
                 Tab(
-                    text:
-                        AppLocalizations.of(context)?.title_device_switching ??
-                            'title_device_switching'),
+                    text: context.l10n?.title_device_switching ??
+                        'title_device_switching'),
                 Tab(
-                    text: AppLocalizations.of(context)?.title_device_wizard ??
+                    text: context.l10n?.title_device_wizard ??
                         'title_device_wizard'),
               ],
             ),

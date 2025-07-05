@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:tlp_ui/features/localization/extensions/build_context.dart';
 import 'package:tlp_ui/widgets/reactive_fields/reactive_yaru_text_field.dart';
 
 class RuntimePMDenylistField extends ReactiveYaruTextField {
@@ -8,13 +8,11 @@ class RuntimePMDenylistField extends ReactiveYaruTextField {
     super.key,
     required super.formControlName,
   }) : super(
-          title: Text(AppLocalizations.of(context)?.label_runtime_pm_denylist ??
+          title: Text(context.l10n?.label_runtime_pm_denylist ??
               'label_runtime_pm_denylist'),
-          subtitle: Text(AppLocalizations.of(context)
-                  ?.label_runtime_pm_denylist_subtitle ??
+          subtitle: Text(context.l10n?.label_runtime_pm_denylist_subtitle ??
               'label_runtime_pm_denylist_subtitle'),
-          headline: Text(AppLocalizations.of(context)
-                  ?.label_runtime_pm_denylist_headline ??
+          headline: Text(context.l10n?.label_runtime_pm_denylist_headline ??
               'label_runtime_pm_denylist_headline'),
         );
 }

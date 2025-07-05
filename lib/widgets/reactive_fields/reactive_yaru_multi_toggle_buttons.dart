@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_essentials_kit/flutter_essentials_kit.dart';
 import 'package:reactive_forms/reactive_forms.dart';
-import 'package:yaru_widgets/widgets.dart';
+import 'package:yaru/yaru.dart';
 
 abstract class ReactiveYaruMultiToggleButtons<T>
     extends ReactiveFormField<T, Set<T>> {
   ReactiveYaruMultiToggleButtons(
-      BuildContext context, {
+    BuildContext context, {
     super.key,
     required String formControlName,
     required Widget title,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reactive_forms/reactive_forms.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 abstract class ReactiveYaruSlider extends ReactiveFormField<String, double> {
   ReactiveYaruSlider(

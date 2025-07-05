@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:tlp_ui/features/localization/extensions/build_context.dart';
 import 'package:tlp_ui/widgets/reactive_fields/reactive_yaru_multi_toggle_buttons.dart';
 
 class DiskIOSchedSelector extends ReactiveYaruMultiToggleButtons<String> {
@@ -8,27 +8,20 @@ class DiskIOSchedSelector extends ReactiveYaruMultiToggleButtons<String> {
     super.key,
     required super.formControlName,
   }) : super(
-          title: Text(AppLocalizations.of(context)?.label_disk_iosched ??
-              'label_disk_iosched'),
-          subtitle: Text(
-              AppLocalizations.of(context)?.label_disk_iosched_subtitle ??
-                  'label_disk_iosched_subtitle'),
-          headline: Text(
-              AppLocalizations.of(context)?.label_disk_iosched_headline ??
-                  'label_disk_iosched_headline'),
+          title: Text(context.l10n?.label_disk_iosched ?? 'label_disk_iosched'),
+          subtitle: Text(context.l10n?.label_disk_iosched_subtitle ??
+              'label_disk_iosched_subtitle'),
+          headline: Text(context.l10n?.label_disk_iosched_headline ??
+              'label_disk_iosched_headline'),
           children: {
-            Text(AppLocalizations.of(context)?.label_mq_deadline ??
-                'label_mq_deadline'): 'mq-deadline',
-            Text(AppLocalizations.of(context)?.label_none ?? 'label_none'):
-                'none',
-            Text(AppLocalizations.of(context)?.label_kyber ?? 'label_kyber'):
-                'kyber',
-            Text(AppLocalizations.of(context)?.label_cfq ?? 'label_cfq'): 'cfq',
-            Text(AppLocalizations.of(context)?.label_bfq ?? 'label_bfq'): 'bfq',
-            Text(AppLocalizations.of(context)?.label_noop ?? 'label_noop'):
-                'noop',
-            Text(AppLocalizations.of(context)?.label_keep ?? 'label_keep'):
-                'keep',
+            Text(context.l10n?.label_mq_deadline ?? 'label_mq_deadline'):
+                'mq-deadline',
+            Text(context.l10n?.label_none ?? 'label_none'): 'none',
+            Text(context.l10n?.label_kyber ?? 'label_kyber'): 'kyber',
+            Text(context.l10n?.label_cfq ?? 'label_cfq'): 'cfq',
+            Text(context.l10n?.label_bfq ?? 'label_bfq'): 'bfq',
+            Text(context.l10n?.label_noop ?? 'label_noop'): 'noop',
+            Text(context.l10n?.label_keep ?? 'label_keep'): 'keep',
           },
         );
 }

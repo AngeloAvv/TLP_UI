@@ -1,23 +1,18 @@
 {
   "app_name": "TLP UI",
-
   "action_open_selected_file": "Open selected File",
   "action_open_external_file": "Open external File",
   "action_reset_fields": "Reset Fields",
   "action_save_settings": "Save Settings",
   "action_cancel": "Cancel",
   "action_reset": "Reset",
-
   "dialog_title_reset_fields": "Reset Fields",
   "dialog_message_reset_fields": "Are you sure you want to reset all fields?",
   "dialog_title_save_settings": "Save Settings",
-
   "error_generic": "Something went wrong!",
-
   "label_select_configuration": "Select configuration file",
   "label_welcome": "Welcome to TLP UI",
   "label_or": "or",
-
   "label_disabled": "Disabled",
   "label_background_tasks": "Background Tasks",
   "label_shell_commands": "Shell Commands",
@@ -69,7 +64,6 @@
   "label_always_use_settings": "Always Use Settings",
   "label_power_off": "Power Off",
   "label_active": "Active",
-
   "label_tlp_enable_headline": "TLP",
   "label_tlp_enable": "Enable TLP (reboot needed)",
   "label_tlp_warn_level_headline": "TLP Warning Level",
@@ -383,15 +377,12 @@
   "label_usb_autosuspend_disable_on_shutdown_headline": "Disable USB Autosuspend on Shutdown",
   "label_usb_autosuspend_disable_on_shutdown": "Disable USB Autosuspend on Shutdown",
   "label_usb_autosuspend_disable_on_shutdown_subtitle": "Disable USB autosuspend on shutdown. This is intended as a workaround if suspended USB devices disturb the shutdown process.",
-
   "settings_app": "App",
   "settings_theme": "Theme",
   "settings_dark_mode": "Dark Mode",
-
   "theme_system": "System",
   "theme_light": "Light",
   "theme_dark": "Dark",
-
   "title_settings": "Settings",
   "title_general": "General",
   "title_audio": "Audio",

@@ -3,14 +3,14 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_essentials_kit/flutter_essentials_kit.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:tlp_ui/blocs/configuration/configuration_bloc.dart';
+import 'package:tlp_ui/features/localization/extensions/build_context.dart';
 import 'package:tlp_ui/features/routing/app_router.dart';
 import 'package:tlp_ui/models/tlp_configuration/tlp_configuration.dart';
 import 'package:tlp_ui/widgets/file_card.dart';
 import 'package:tlp_ui/widgets/or_separator.dart';
-import 'package:yaru_widgets/yaru_widgets.dart';
+import 'package:yaru/yaru.dart';
 
 /// Enter the Welcome documentation here
 @RoutePage()
@@ -65,8 +65,7 @@ class _WelcomePageState extends State<WelcomePage> {
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 16.0),
                         child: Text(
-                          AppLocalizations.of(context)?.label_welcome ??
-                              'label_welcome',
+                          context.l10n?.label_welcome ?? 'label_welcome',
                           style: Theme.of(context).textTheme.displayMedium,
                           textAlign: TextAlign.center,
                         ),
@@ -79,9 +78,9 @@ class _WelcomePageState extends State<WelcomePage> {
                                 margin:
                                     const EdgeInsets.symmetric(vertical: 16.0),
                                 padding: const EdgeInsets.all(16.0),
-                                headline: Text(AppLocalizations.of(context)
-                                        ?.label_select_configuration ??
-                                    'label_select_configuration'),
+                                headline: Text(
+                                    context.l10n?.label_select_configuration ??
+                                        'label_select_configuration'),
                                 child: SizedBox(
                                   height: 500.0,
                                   width: 1000.0,
@@ -111,8 +110,8 @@ class _WelcomePageState extends State<WelcomePage> {
                                           .load(path)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
-                                    child: Text(AppLocalizations.of(context)
-                                            ?.action_open_selected_file ??
+                                    child: Text(context
+                                            .l10n?.action_open_selected_file ??
                                         'action_open_selected_file'),
                                   ),
                                 ),
@@ -128,9 +127,9 @@ class _WelcomePageState extends State<WelcomePage> {
                           onPressed: () => _pickFile(context),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text(AppLocalizations.of(context)
-                                    ?.action_open_external_file ??
-                                'action_open_external_file'),
+                            child: Text(
+                                context.l10n?.action_open_external_file ??
+                                    'action_open_external_file'),
                           ),
                         ),
                       ),

@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:reactive_forms/reactive_forms.dart';
+import 'package:tlp_ui/features/localization/extensions/build_context.dart';
 import 'package:tlp_ui/misc/defaults.dart';
 import 'package:tlp_ui/pages/storage/widgets/disk_idle_secs_on_ac_field.dart';
 import 'package:tlp_ui/pages/storage/widgets/disk_idle_secs_on_bat_field.dart';
@@ -27,8 +27,7 @@ class FileSystemPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Text(
-                  AppLocalizations.of(context)?.title_filesystem ??
-                      'title_filesystem',
+                  context.l10n?.title_filesystem ?? 'title_filesystem',
                   style: Theme.of(context).textTheme.displaySmall,
                 ),
               ),
