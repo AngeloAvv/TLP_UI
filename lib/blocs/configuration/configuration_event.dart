@@ -1,7 +1,7 @@
 part of 'configuration_bloc.dart';
 
 @freezed
-class ConfigurationEvent with _$ConfigurationEvent {
+sealed class ConfigurationEvent with _$ConfigurationEvent {
   const factory ConfigurationEvent.fetch() = FetchConfigurationEvent;
 
   const factory ConfigurationEvent.load(String path) = LoadConfigurationEvent;
