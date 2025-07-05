@@ -9,7 +9,7 @@ class OrSeparator extends StatelessWidget {
         children: [
           Expanded(
             child: Divider(
-              color: Theme.of(context).colorScheme.onSurface.withOpacity(0.2),
+              color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.2),
             ),
           ),
           Padding(
@@ -21,7 +21,7 @@ class OrSeparator extends StatelessWidget {
           ),
           Expanded(
             child: Divider(
-              color: Theme.of(context).colorScheme.onSurface.withOpacity(0.2),
+              color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.2),
             ),
           ),
         ],

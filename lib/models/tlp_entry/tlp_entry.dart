@@ -3,7 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'tlp_entry.freezed.dart';
 
 @freezed
-class TLPEntry with _$TLPEntry {
+abstract class TLPEntry with _$TLPEntry {
   const TLPEntry._();
 
   const factory TLPEntry({

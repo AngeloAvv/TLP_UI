@@ -402,14 +402,14 @@ class _MainPageState extends State<MainPage> {
         ),
         actions: [
           TextButton(
-            onPressed: () => context.popRoute(),
+            onPressed: () => context.maybePop(),
             child: Text(
               AppLocalizations.of(context)?.action_cancel ?? 'action_cancel',
             ),
           ),
           TextButton(
             onPressed: () {
-              context.popRoute();
+              context.maybePop();
               _initSettings();
             },
             child: Text(

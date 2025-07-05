@@ -1,32 +1,32 @@
 part of 'configuration_bloc.dart';
 
 @freezed
-class ConfigurationState with _$ConfigurationState {
-  const factory ConfigurationState.initial() = _InitialConfigurationState;
+sealed class ConfigurationState with _$ConfigurationState {
+  const factory ConfigurationState.initial() = InitialConfigurationState;
 
-  const factory ConfigurationState.fetching() = _FetchingConfigurationState;
+  const factory ConfigurationState.fetching() = FetchingConfigurationState;
 
   const factory ConfigurationState.fetched(List<String> files) =
-      _FetchedConfigurationState;
+      FetchedConfigurationState;
 
-  const factory ConfigurationState.none() = _NoConfigurationState;
+  const factory ConfigurationState.none() = NoConfigurationState;
 
   const factory ConfigurationState.errorFetching(LocalizedError error) =
-      _ErrorFetchingConfigurationState;
+      ErrorFetchingConfigurationState;
 
-  const factory ConfigurationState.loading() = _LoadingConfigurationState;
+  const factory ConfigurationState.loading() = LoadingConfigurationState;
 
   const factory ConfigurationState.loaded(TLPConfiguration configuration) =
-      _LoadedConfigurationState;
+      LoadedConfigurationState;
 
   const factory ConfigurationState.errorLoading(LocalizedError error) =
-      _ErrorLoadingConfigurationState;
+      ErrorLoadingConfigurationState;
 
-  const factory ConfigurationState.saving() = _SavingConfigurationState;
+  const factory ConfigurationState.saving() = SavingConfigurationState;
 
   const factory ConfigurationState.saved(TLPConfiguration configuration) =
-      _SavedConfigurationState;
+      SavedConfigurationState;
 
   const factory ConfigurationState.errorSaving(LocalizedError error) =
-      _ErrorSavingConfigurationState;
+      ErrorSavingConfigurationState;
 }
