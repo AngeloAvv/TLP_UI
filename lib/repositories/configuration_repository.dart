@@ -29,14 +29,14 @@ class ConfigurationRepositoryImpl extends Repository
   @override
   Future<List<String>> get files => safeCode(() async {
     try {
-      talker.info('[ConfigurationRepository] Loading files...');
+      talker.info('[$ConfigurationRepository] Loading files...');
       final files = await configurationService.files;
-      talker.good('[ConfigurationRepository] Files loaded successfully');
+      talker.info('[$ConfigurationRepository] Files loaded successfully');
 
       return files.map((file) => file.path).toList(growable: false);
     } catch (error, stackTrace) {
       talker.error(
-        '[ConfigurationRepository] Error loading files',
+        '[$ConfigurationRepository] Error loading files',
         error,
         stackTrace,
       );
@@ -48,15 +48,15 @@ class ConfigurationRepositoryImpl extends Repository
   @override
   Future<TLPConfiguration> load(String path) => safeCode(() async {
         try {
-          talker.info('[ConfigurationRepository] Loading configuration from $path...');
+          talker.info('[$ConfigurationRepository] Loading configuration from $path...');
           final configuration = await configurationService.load(path);
-          talker.good(
-              '[ConfigurationRepository] Configuration loaded successfully from $path');
+          talker.info(
+              '[$ConfigurationRepository] Configuration loaded successfully from $path');
 
           return configuration;
         } catch (error, stackTrace) {
           talker.error(
-            '[ConfigurationRepository] Error loading configuration from $path',
+            '[$ConfigurationRepository] Error loading configuration from $path',
             error,
             stackTrace,
           );
@@ -72,15 +72,15 @@ class ConfigurationRepositoryImpl extends Repository
   }) =>
       safeCode(() async {
         try {
-          talker.info('[ConfigurationRepository] Saving configuration...');
+          talker.info('[$ConfigurationRepository] Saving configuration...');
           final config = configurationService.save(configuration, path: path);
-          talker.good(
-              '[ConfigurationRepository] Configuration saved successfully');
+          talker.info(
+              '[$ConfigurationRepository] Configuration saved successfully');
 
           return config;
         } catch (error, stackTrace) {
           talker.error(
-            '[ConfigurationRepository] Error saving configuration',
+            '[$ConfigurationRepository] Error saving configuration',
             error,
             stackTrace,
           );
