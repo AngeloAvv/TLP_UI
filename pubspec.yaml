@@ -9,7 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  yaru: ^1.1.0
+  yaru: ^8.0.0
   pine: ^1.0.2
   auto_route: ^10.0.0
   flutter_bloc: ^8.1.3
