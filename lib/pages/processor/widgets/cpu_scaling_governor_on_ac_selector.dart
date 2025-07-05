@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:tlp_ui/features/localization/extensions/build_context.dart';
 import 'package:tlp_ui/widgets/reactive_fields/reactive_yaru_toggle_buttons.dart';
 
 class CpuScalingGovernorOnAcSelector extends ReactiveYaruToggleButtons<String> {
@@ -8,28 +8,26 @@ class CpuScalingGovernorOnAcSelector extends ReactiveYaruToggleButtons<String> {
     super.key,
     required super.formControlName,
   }) : super(
-          title: Text(
-              AppLocalizations.of(context)?.label_cpu_scaling_governor_on_ac ??
-                  'label_cpu_scaling_governor_on_ac'),
-          headline: Text(AppLocalizations.of(context)
-                  ?.label_cpu_scaling_governor_on_ac_headline ??
-              'label_cpu_scaling_governor_on_ac_headline'),
-          subtitle: Text(AppLocalizations.of(context)
-                  ?.label_cpu_scaling_governor_on_ac_subtitle ??
-              'label_cpu_scaling_governor_on_ac_subtitle'),
+          title: Text(context.l10n?.label_cpu_scaling_governor_on_ac ??
+              'label_cpu_scaling_governor_on_ac'),
+          headline: Text(
+              context.l10n?.label_cpu_scaling_governor_on_ac_headline ??
+                  'label_cpu_scaling_governor_on_ac_headline'),
+          subtitle: Text(
+              context.l10n?.label_cpu_scaling_governor_on_ac_subtitle ??
+                  'label_cpu_scaling_governor_on_ac_subtitle'),
           children: {
-            Text(AppLocalizations.of(context)?.label_conservative ??
-                'label_conservative'): 'conservative',
-            Text(AppLocalizations.of(context)?.label_ondemand ??
-                'label_ondemand'): 'ondemand',
-            Text(AppLocalizations.of(context)?.label_userspace ??
-                'label_userspace'): 'userspace',
-            Text(AppLocalizations.of(context)?.label_powersave ??
-                'label_powersave'): 'powersave',
-            Text(AppLocalizations.of(context)?.label_performance ??
-                'label_performance'): 'performance',
-            Text(AppLocalizations.of(context)?.label_schedutil ??
-                'label_schedutil'): 'schedutil',
+            Text(context.l10n?.label_conservative ?? 'label_conservative'):
+                'conservative',
+            Text(context.l10n?.label_ondemand ?? 'label_ondemand'): 'ondemand',
+            Text(context.l10n?.label_userspace ?? 'label_userspace'):
+                'userspace',
+            Text(context.l10n?.label_powersave ?? 'label_powersave'):
+                'powersave',
+            Text(context.l10n?.label_performance ?? 'label_performance'):
+                'performance',
+            Text(context.l10n?.label_schedutil ?? 'label_schedutil'):
+                'schedutil',
           },
         );
 }

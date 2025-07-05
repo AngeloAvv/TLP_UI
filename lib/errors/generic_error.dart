@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_essentials_kit/flutter_essentials_kit.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:tlp_ui/features/localization/extensions/build_context.dart';
 
 class GenericError extends LocalizedError {
   @override
-  String? localizedString(BuildContext context) =>
-      AppLocalizations.of(context)?.error_generic;
+  String? localizedString(BuildContext context) => context.l10n?.error_generic;
 
   @override
   bool operator ==(Object other) =>

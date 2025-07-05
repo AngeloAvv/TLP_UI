@@ -28,27 +28,28 @@ class ConfigurationRepositoryImpl extends Repository
 
   @override
   Future<List<String>> get files => safeCode(() async {
-    try {
-      talker.info('[$ConfigurationRepository] Loading files...');
-      final files = await configurationService.files;
-      talker.info('[$ConfigurationRepository] Files loaded successfully');
+        try {
+          talker.info('[$ConfigurationRepository] Loading files...');
+          final files = await configurationService.files;
+          talker.info('[$ConfigurationRepository] Files loaded successfully');
 
-      return files.map((file) => file.path).toList(growable: false);
-    } catch (error, stackTrace) {
-      talker.error(
-        '[$ConfigurationRepository] Error loading files',
-        error,
-        stackTrace,
-      );
+          return files.map((file) => file.path).toList(growable: false);
+        } catch (error, stackTrace) {
+          talker.error(
+            '[$ConfigurationRepository] Error loading files',
+            error,
+            stackTrace,
+          );
 
-      rethrow;
-    }
-  });
+          rethrow;
+        }
+      });
 
   @override
   Future<TLPConfiguration> load(String path) => safeCode(() async {
         try {
-          talker.info('[$ConfigurationRepository] Loading configuration from $path...');
+          talker.info(
+              '[$ConfigurationRepository] Loading configuration from $path...');
           final configuration = await configurationService.load(path);
           talker.info(
               '[$ConfigurationRepository] Configuration loaded successfully from $path');

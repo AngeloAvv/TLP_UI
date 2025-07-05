@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:reactive_forms/reactive_forms.dart';
+import 'package:tlp_ui/features/localization/extensions/build_context.dart';
 import 'package:tlp_ui/misc/defaults.dart';
 import 'package:tlp_ui/pages/radio/widgets/devices_to_disable_on_dock_selector.dart';
 import 'package:tlp_ui/pages/radio/widgets/devices_to_disable_on_lan_connect_selector.dart';
@@ -33,8 +33,7 @@ class DeviceWizardPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Text(
-                  AppLocalizations.of(context)?.title_device_wizard ??
-                      'title_device_wizard',
+                  context.l10n?.title_device_wizard ?? 'title_device_wizard',
                   style: Theme.of(context).textTheme.displaySmall,
                 ),
               ),

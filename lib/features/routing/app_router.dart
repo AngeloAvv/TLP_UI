@@ -1,5 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart' hide Route;
+import 'package:reactive_forms/reactive_forms.dart';
+import 'package:tlp_ui/models/tlp_configuration/tlp_configuration.dart';
 import 'package:tlp_ui/pages/audio/audio_page.dart';
 import 'package:tlp_ui/pages/battery/battery_page.dart';
 import 'package:tlp_ui/pages/drive/drive_page.dart';
@@ -19,8 +21,6 @@ import 'package:tlp_ui/pages/storage/file_system_page.dart';
 import 'package:tlp_ui/pages/storage/storage_page.dart';
 import 'package:tlp_ui/pages/usb/usb_page.dart';
 import 'package:tlp_ui/pages/welcome_page.dart';
-import 'package:tlp_ui/models/tlp_configuration/tlp_configuration.dart';
-import 'package:reactive_forms/reactive_forms.dart';
 
 part 'app_router.gr.dart';
 

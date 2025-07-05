@@ -2,10 +2,10 @@ import 'package:auto_route/auto_route.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 import 'package:tlp_ui/blocs/configuration/configuration_bloc.dart';
+import 'package:tlp_ui/features/localization/extensions/build_context.dart';
 import 'package:tlp_ui/features/routing/app_router.dart';
 import 'package:tlp_ui/features/theme/cubits/theme_cubit.dart';
 import 'package:tlp_ui/features/theme/models/theme.dart';
@@ -262,97 +262,83 @@ class _MainPageState extends State<MainPage> {
                             icon: const Icon(FontAwesomeIcons.gears),
                             selectedIcon: const Icon(FontAwesomeIcons.gears),
                             label: Text(
-                                AppLocalizations.of(context)?.title_general ??
-                                    'title_general'),
+                                context.l10n?.title_general ?? 'title_general'),
                           ),
                           NavigationRailDestination(
                             icon: const Icon(FontAwesomeIcons.music),
                             selectedIcon: const Icon(FontAwesomeIcons.music),
                             label: Text(
-                                AppLocalizations.of(context)?.title_audio ??
-                                    'title_audio'),
+                                context.l10n?.title_audio ?? 'title_audio'),
                           ),
                           NavigationRailDestination(
                             icon: const Icon(FontAwesomeIcons.batteryFull),
                             selectedIcon:
                                 const Icon(FontAwesomeIcons.batteryFull),
                             label: Text(
-                                AppLocalizations.of(context)?.title_battery ??
-                                    'title_battery'),
+                                context.l10n?.title_battery ?? 'title_battery'),
                           ),
                           NavigationRailDestination(
                             icon: const Icon(FontAwesomeIcons.compactDisc),
                             selectedIcon:
                                 const Icon(FontAwesomeIcons.compactDisc),
-                            label: Text(
-                                AppLocalizations.of(context)?.title_drive_bay ??
-                                    'title_drive_bay'),
+                            label: Text(context.l10n?.title_drive_bay ??
+                                'title_drive_bay'),
                           ),
                           NavigationRailDestination(
                             icon: const Icon(FontAwesomeIcons.hardDrive),
                             selectedIcon:
                                 const Icon(FontAwesomeIcons.hardDrive),
                             label: Text(
-                                AppLocalizations.of(context)?.title_storage ??
-                                    'title_storage'),
+                                context.l10n?.title_storage ?? 'title_storage'),
                           ),
                           NavigationRailDestination(
                             icon: const Icon(FontAwesomeIcons.display),
                             selectedIcon: const Icon(FontAwesomeIcons.display),
-                            label: Text(
-                                AppLocalizations.of(context)?.title_graphics ??
-                                    'title_graphics'),
+                            label: Text(context.l10n?.title_graphics ??
+                                'title_graphics'),
                           ),
                           NavigationRailDestination(
                             icon: const Icon(FontAwesomeIcons.code),
                             selectedIcon: const Icon(FontAwesomeIcons.code),
                             label: Text(
-                                AppLocalizations.of(context)?.title_kernel ??
-                                    'title_kernel'),
+                                context.l10n?.title_kernel ?? 'title_kernel'),
                           ),
                           NavigationRailDestination(
                             icon: const Icon(FontAwesomeIcons.networkWired),
                             selectedIcon:
                                 const Icon(FontAwesomeIcons.networkWired),
                             label: Text(
-                                AppLocalizations.of(context)?.title_network ??
-                                    'title_network'),
+                                context.l10n?.title_network ?? 'title_network'),
                           ),
                           NavigationRailDestination(
                             icon: const Icon(FontAwesomeIcons.computer),
                             selectedIcon: const Icon(FontAwesomeIcons.computer),
-                            label: Text(
-                                AppLocalizations.of(context)?.title_platform ??
-                                    'title_platform'),
+                            label: Text(context.l10n?.title_platform ??
+                                'title_platform'),
                           ),
                           NavigationRailDestination(
                             icon: const Icon(FontAwesomeIcons.microchip),
                             selectedIcon:
                                 const Icon(FontAwesomeIcons.microchip),
-                            label: Text(
-                                AppLocalizations.of(context)?.title_processor ??
-                                    'title_processor'),
+                            label: Text(context.l10n?.title_processor ??
+                                'title_processor'),
                           ),
                           NavigationRailDestination(
                             icon: const Icon(FontAwesomeIcons.wifi),
                             selectedIcon: const Icon(FontAwesomeIcons.wifi),
                             label: Text(
-                                AppLocalizations.of(context)?.title_radio ??
-                                    'title_radio'),
+                                context.l10n?.title_radio ?? 'title_radio'),
                           ),
                           NavigationRailDestination(
                             icon: const Icon(FontAwesomeIcons.powerOff),
                             selectedIcon: const Icon(FontAwesomeIcons.powerOff),
                             label: Text(
-                                AppLocalizations.of(context)?.title_power ??
-                                    'title_power'),
+                                context.l10n?.title_power ?? 'title_power'),
                           ),
                           NavigationRailDestination(
                             icon: const Icon(FontAwesomeIcons.usb),
                             selectedIcon: const Icon(FontAwesomeIcons.usb),
-                            label: Text(
-                                AppLocalizations.of(context)?.title_usb ??
-                                    'title_usb'),
+                            label: Text(context.l10n?.title_usb ?? 'title_usb'),
                           ),
                         ],
                       ),
@@ -370,16 +356,14 @@ class _MainPageState extends State<MainPage> {
                 children: [
                   OutlinedButton(
                     onPressed: () => _showResetFieldsDialog(context),
-                    child: Text(
-                        AppLocalizations.of(context)?.action_reset_fields ??
-                            'action_reset_fields'),
+                    child: Text(context.l10n?.action_reset_fields ??
+                        'action_reset_fields'),
                   ),
                   const SizedBox(width: 16.0),
                   ElevatedButton(
                     onPressed: () => _showSaveFileDialog(context),
-                    child: Text(
-                        AppLocalizations.of(context)?.action_save_settings ??
-                            'action_save_settings'),
+                    child: Text(context.l10n?.action_save_settings ??
+                        'action_save_settings'),
                   ),
                 ],
               ),
@@ -393,18 +377,16 @@ class _MainPageState extends State<MainPage> {
       context: context,
       builder: (context) => AlertDialog(
         title: Text(
-          AppLocalizations.of(context)?.dialog_title_reset_fields ??
-              'title_reset_fields',
+          context.l10n?.dialog_title_reset_fields ?? 'title_reset_fields',
         ),
         content: Text(
-          AppLocalizations.of(context)?.dialog_message_reset_fields ??
-              'message_reset_fields',
+          context.l10n?.dialog_message_reset_fields ?? 'message_reset_fields',
         ),
         actions: [
           TextButton(
             onPressed: () => context.maybePop(),
             child: Text(
-              AppLocalizations.of(context)?.action_cancel ?? 'action_cancel',
+              context.l10n?.action_cancel ?? 'action_cancel',
             ),
           ),
           TextButton(
@@ -413,7 +395,7 @@ class _MainPageState extends State<MainPage> {
               _initSettings();
             },
             child: Text(
-              AppLocalizations.of(context)?.action_reset ?? 'action_reset',
+              context.l10n?.action_reset ?? 'action_reset',
             ),
           ),
         ],
@@ -423,7 +405,7 @@ class _MainPageState extends State<MainPage> {
 
   void _showSaveFileDialog(BuildContext context) async {
     final path = await FilePicker.platform.saveFile(
-      dialogTitle: AppLocalizations.of(context)?.dialog_title_save_settings ??
+      dialogTitle: context.l10n?.dialog_title_save_settings ??
           'dialog_title_save_settings',
       allowedExtensions: ['conf'],
       initialDirectory: K.defaultFolderPath,
