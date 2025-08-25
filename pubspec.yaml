@@ -24,7 +24,7 @@ dependencies:
   pine: ^1.0.2
   provider: ^6.0.5
   reactive_forms: ^18.0.0
-  talker: ^4.0.0
+  talker: ^5.0.0
   yaru: ^8.0.0
 
 dev_dependencies:
