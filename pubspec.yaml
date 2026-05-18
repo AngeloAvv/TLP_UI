@@ -11,7 +11,7 @@ dependencies:
     sdk: flutter
   auto_route: ^10.0.0
   equatable: ^2.0.5
-  file_picker: ^10.0.0
+  file_picker: ^11.0.0
   flutter_bloc: ^9.0.0
   flutter_essentials_kit: ^2.4.0
   flutter_staggered_grid_view: ^0.7.0
