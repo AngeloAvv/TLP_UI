@@ -9,7 +9,6 @@ linter:
 
 analyzer:
   errors:
-    todo: warning
     missing_return: error
     dead_code: error
     invalid_annotation_target: ignore
