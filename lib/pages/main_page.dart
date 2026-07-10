@@ -259,85 +259,85 @@ class _MainPageState extends State<MainPage> {
                         onDestinationSelected: tabsRouter.setActiveIndex,
                         destinations: [
                           NavigationRailDestination(
-                            icon: const Icon(FontAwesomeIcons.gears),
-                            selectedIcon: const Icon(FontAwesomeIcons.gears),
+                            icon: const FaIcon(FontAwesomeIcons.gears),
+                            selectedIcon: const FaIcon(FontAwesomeIcons.gears),
                             label: Text(
                                 context.l10n?.title_general ?? 'title_general'),
                           ),
                           NavigationRailDestination(
-                            icon: const Icon(FontAwesomeIcons.music),
-                            selectedIcon: const Icon(FontAwesomeIcons.music),
+                            icon: const FaIcon(FontAwesomeIcons.music),
+                            selectedIcon: const FaIcon(FontAwesomeIcons.music),
                             label: Text(
                                 context.l10n?.title_audio ?? 'title_audio'),
                           ),
                           NavigationRailDestination(
-                            icon: const Icon(FontAwesomeIcons.batteryFull),
+                            icon: const FaIcon(FontAwesomeIcons.batteryFull),
                             selectedIcon:
-                                const Icon(FontAwesomeIcons.batteryFull),
+                                const FaIcon(FontAwesomeIcons.batteryFull),
                             label: Text(
                                 context.l10n?.title_battery ?? 'title_battery'),
                           ),
                           NavigationRailDestination(
-                            icon: const Icon(FontAwesomeIcons.compactDisc),
+                            icon: const FaIcon(FontAwesomeIcons.compactDisc),
                             selectedIcon:
-                                const Icon(FontAwesomeIcons.compactDisc),
+                                const FaIcon(FontAwesomeIcons.compactDisc),
                             label: Text(context.l10n?.title_drive_bay ??
                                 'title_drive_bay'),
                           ),
                           NavigationRailDestination(
-                            icon: const Icon(FontAwesomeIcons.hardDrive),
+                            icon: const FaIcon(FontAwesomeIcons.hardDrive),
                             selectedIcon:
-                                const Icon(FontAwesomeIcons.hardDrive),
+                                const FaIcon(FontAwesomeIcons.hardDrive),
                             label: Text(
                                 context.l10n?.title_storage ?? 'title_storage'),
                           ),
                           NavigationRailDestination(
-                            icon: const Icon(FontAwesomeIcons.display),
-                            selectedIcon: const Icon(FontAwesomeIcons.display),
+                            icon: const FaIcon(FontAwesomeIcons.display),
+                            selectedIcon: const FaIcon(FontAwesomeIcons.display),
                             label: Text(context.l10n?.title_graphics ??
                                 'title_graphics'),
                           ),
                           NavigationRailDestination(
-                            icon: const Icon(FontAwesomeIcons.code),
-                            selectedIcon: const Icon(FontAwesomeIcons.code),
+                            icon: const FaIcon(FontAwesomeIcons.code),
+                            selectedIcon: const FaIcon(FontAwesomeIcons.code),
                             label: Text(
                                 context.l10n?.title_kernel ?? 'title_kernel'),
                           ),
                           NavigationRailDestination(
-                            icon: const Icon(FontAwesomeIcons.networkWired),
+                            icon: const FaIcon(FontAwesomeIcons.networkWired),
                             selectedIcon:
-                                const Icon(FontAwesomeIcons.networkWired),
+                                const FaIcon(FontAwesomeIcons.networkWired),
                             label: Text(
                                 context.l10n?.title_network ?? 'title_network'),
                           ),
                           NavigationRailDestination(
-                            icon: const Icon(FontAwesomeIcons.computer),
-                            selectedIcon: const Icon(FontAwesomeIcons.computer),
+                            icon: const FaIcon(FontAwesomeIcons.computer),
+                            selectedIcon: const FaIcon(FontAwesomeIcons.computer),
                             label: Text(context.l10n?.title_platform ??
                                 'title_platform'),
                           ),
                           NavigationRailDestination(
-                            icon: const Icon(FontAwesomeIcons.microchip),
+                            icon: const FaIcon(FontAwesomeIcons.microchip),
                             selectedIcon:
-                                const Icon(FontAwesomeIcons.microchip),
+                                const FaIcon(FontAwesomeIcons.microchip),
                             label: Text(context.l10n?.title_processor ??
                                 'title_processor'),
                           ),
                           NavigationRailDestination(
-                            icon: const Icon(FontAwesomeIcons.wifi),
-                            selectedIcon: const Icon(FontAwesomeIcons.wifi),
+                            icon: const FaIcon(FontAwesomeIcons.wifi),
+                            selectedIcon: const FaIcon(FontAwesomeIcons.wifi),
                             label: Text(
                                 context.l10n?.title_radio ?? 'title_radio'),
                           ),
                           NavigationRailDestination(
-                            icon: const Icon(FontAwesomeIcons.powerOff),
-                            selectedIcon: const Icon(FontAwesomeIcons.powerOff),
+                            icon: const FaIcon(FontAwesomeIcons.powerOff),
+                            selectedIcon: const FaIcon(FontAwesomeIcons.powerOff),
                             label: Text(
                                 context.l10n?.title_power ?? 'title_power'),
                           ),
                           NavigationRailDestination(
-                            icon: const Icon(FontAwesomeIcons.usb),
-                            selectedIcon: const Icon(FontAwesomeIcons.usb),
+                            icon: const FaIcon(FontAwesomeIcons.usb),
+                            selectedIcon: const FaIcon(FontAwesomeIcons.usb),
                             label: Text(context.l10n?.title_usb ?? 'title_usb'),
                           ),
                         ],
@@ -466,7 +466,7 @@ class _Title extends StatelessWidget {
           onPressed: () => context
               .read<ThemeCubit>()
               .setTheme(state.isLight ? ThemeType.dark : ThemeType.light),
-          icon: Icon(
+          icon: FaIcon(
             state.isLight ? FontAwesomeIcons.sun : FontAwesomeIcons.moon,
           ),
         ),
