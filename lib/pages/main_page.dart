@@ -404,7 +404,7 @@ class _MainPageState extends State<MainPage> {
   }
 
   void _showSaveFileDialog(BuildContext context) async {
-    final path = await FilePicker.platform.saveFile(
+    final path = await FilePicker.saveFile(
       dialogTitle: context.l10n?.dialog_title_save_settings ??
           'dialog_title_save_settings',
       allowedExtensions: ['conf'],
