@@ -19,7 +19,7 @@ abstract class ReactiveYaruSlider extends ReactiveFormField<String, double> {
             margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
             child: Column(
               children: [
-                YaruTile(
+                YaruListTile(
                   title: title,
                   subtitle: subtitle,
                   trailing: Text(

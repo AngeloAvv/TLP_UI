@@ -26,7 +26,7 @@ class ReactiveYaruTextField extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            YaruTile(
+            YaruListTile(
               title: title,
               subtitle: subtitle,
               trailing: dense
