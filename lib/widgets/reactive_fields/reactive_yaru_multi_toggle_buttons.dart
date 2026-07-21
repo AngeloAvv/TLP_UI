@@ -18,7 +18,7 @@ abstract class ReactiveYaruMultiToggleButtons<T>
           builder: (field) => YaruSection(
             headline: headline,
             margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-            child: YaruTile(
+            child: YaruListTile(
               title: title,
               subtitle: subtitle,
               trailing: ToggleButtons(
