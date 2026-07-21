@@ -142,7 +142,7 @@ class _WelcomePageState extends State<WelcomePage> {
       );
 
   void _pickFile(BuildContext context) async {
-    FilePickerResult? result = await FilePicker.platform.pickFiles(
+    FilePickerResult? result = await FilePicker.pickFiles(
       allowedExtensions: ['conf'],
     );
 
