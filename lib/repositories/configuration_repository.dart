@@ -78,7 +78,7 @@ class ConfigurationRepositoryImpl extends Repository
           talker.info(
               '[$ConfigurationRepository] Configuration saved successfully');
 
-          return config;
+          return await config;
         } catch (error, stackTrace) {
           talker.error(
             '[$ConfigurationRepository] Error saving configuration',

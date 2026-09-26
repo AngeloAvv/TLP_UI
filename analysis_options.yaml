@@ -18,3 +18,5 @@ analyzer:
     - "**/*.gr.dart"
     - "**/*.freezed.dart"
     - "**/*.mocks.dart"
+    - build/**
+    - linux/**
