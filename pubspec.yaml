@@ -20,7 +20,7 @@ dependencies:
   hydrated_bloc: ^11.0.0
   intl: any
   path: ^1.8.3
-  path_provider: ^2.1.1
+  path_provider: ^2.1.2
   pine: ^1.0.2
   provider: ^6.1.5+1
   reactive_forms: ^18.0.0
