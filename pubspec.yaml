@@ -12,7 +12,7 @@ dependencies:
   auto_route: ^11.0.0
   equatable: ^3.0.0
   file_picker: ^11.0.3
-  flutter_bloc: ^9.0.0
+  flutter_bloc: ^9.1.1
   flutter_essentials_kit: ^2.4.0
   flutter_staggered_grid_view: ^0.7.0
   font_awesome_flutter: ^11.0.0
