@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart' hide Route;
+import 'package:material_ui/material_ui.dart' hide Route;
 import 'package:tlp_ui/features/localization/app_localizations.dart';
 
 extension BuildContextLocalizations on BuildContext {

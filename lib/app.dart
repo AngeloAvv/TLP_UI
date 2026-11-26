@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:tlp_ui/di/dependency_injector.dart';
 import 'package:tlp_ui/features/localization/app_localizations.dart';
 import 'package:tlp_ui/features/localization/extensions/build_context.dart';
@@ -27,7 +27,10 @@ class App extends StatelessWidget {
               darkTheme: yaru.darkTheme,
               themeMode: mode,
               supportedLocales: AppLocalizations.supportedLocales,
-              localizationsDelegates: AppLocalizations.localizationsDelegates,
+              localizationsDelegates: const [
+                AppLocalizations.delegate,
+                ...GlobalMaterialLocalizations.delegates,
+              ],
             );
           }),
         ),

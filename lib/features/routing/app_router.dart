@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart' hide Route;
+import 'package:material_ui/material_ui.dart' hide Route;
 import 'package:reactive_forms/reactive_forms.dart';
 import 'package:tlp_ui/models/tlp_configuration/tlp_configuration.dart';
 import 'package:tlp_ui/pages/audio/audio_page.dart';
