@@ -9,9 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  auto_route: ^11.0.0
+  auto_route: ^11.2.0
   equatable: ^3.0.0
-  file_picker: ^11.0.3
+  file_picker: ^13.4.1
   flutter_bloc: ^9.1.1
   flutter_essentials_kit: ^2.9.1
   flutter_staggered_grid_view: ^0.7.0
@@ -25,7 +25,8 @@ dependencies:
   provider: ^6.1.5+1
   reactive_forms: ^18.0.0
   talker: ^5.2.0
-  yaru: 10.2.0
+  yaru: ^12.0.0
+  material_ui: ^1.11.1
 
 dev_dependencies:
   flutter_test:

@@ -1,8 +1,11 @@
+import 'dart:typed_data';
+
 import 'package:auto_route/auto_route.dart';
 import 'package:file_picker/file_picker.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:path/path.dart' as p;
 import 'package:reactive_forms/reactive_forms.dart';
 import 'package:tlp_ui/blocs/configuration/configuration_bloc.dart';
 import 'package:tlp_ui/features/localization/extensions/build_context.dart';
@@ -293,7 +296,8 @@ class _MainPageState extends State<MainPage> {
                           ),
                           NavigationRailDestination(
                             icon: const FaIcon(FontAwesomeIcons.display),
-                            selectedIcon: const FaIcon(FontAwesomeIcons.display),
+                            selectedIcon:
+                                const FaIcon(FontAwesomeIcons.display),
                             label: Text(context.l10n?.title_graphics ??
                                 'title_graphics'),
                           ),
@@ -312,7 +316,8 @@ class _MainPageState extends State<MainPage> {
                           ),
                           NavigationRailDestination(
                             icon: const FaIcon(FontAwesomeIcons.computer),
-                            selectedIcon: const FaIcon(FontAwesomeIcons.computer),
+                            selectedIcon:
+                                const FaIcon(FontAwesomeIcons.computer),
                             label: Text(context.l10n?.title_platform ??
                                 'title_platform'),
                           ),
@@ -331,7 +336,8 @@ class _MainPageState extends State<MainPage> {
                           ),
                           NavigationRailDestination(
                             icon: const FaIcon(FontAwesomeIcons.powerOff),
-                            selectedIcon: const FaIcon(FontAwesomeIcons.powerOff),
+                            selectedIcon:
+                                const FaIcon(FontAwesomeIcons.powerOff),
                             label: Text(
                                 context.l10n?.title_power ?? 'title_power'),
                           ),
@@ -404,15 +410,18 @@ class _MainPageState extends State<MainPage> {
   }
 
   void _showSaveFileDialog(BuildContext context) async {
-    final path = await FilePicker.saveFile(
+    // The configuration is written (with elevated privileges) by
+    // ConfigurationBloc.save: the picker is only used to choose the target.
+    final uri = await FilePicker.saveFile(
+      fileName: p.basename(K.defaultPath),
+      bytes: Uint8List(0),
       dialogTitle: context.l10n?.dialog_title_save_settings ??
           'dialog_title_save_settings',
-      allowedExtensions: ['conf'],
       initialDirectory: K.defaultFolderPath,
     );
 
-    if (context.mounted && path != null) {
-      _saveSettings(context, path: path);
+    if (context.mounted && uri != null && uri.scheme == 'file') {
+      _saveSettings(context, path: uri.toFilePath());
     }
   }
 

@@ -1,4 +1,7 @@
-synthetic-package: false
 arb-dir: lib/features/localization/resources
 template-arb-file: app_en.arb
 output-dir: lib/features/localization
+
+# gen-l10n still emits the deprecated GlobalMaterialLocalizations/GlobalCupertinoLocalizations
+# delegates (flutter/flutter#196770, #191072). Remove once the tool learns about material_ui.
+header: "// ignore_for_file: deprecated_member_use"

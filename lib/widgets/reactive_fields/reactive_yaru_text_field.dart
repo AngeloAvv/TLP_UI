@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:reactive_forms/reactive_forms.dart';
+import 'package:material_ui/material_ui.dart';
+import 'package:tlp_ui/widgets/reactive_fields/reactive_yaru_input.dart';
 import 'package:yaru/yaru.dart';
 
 class ReactiveYaruTextField extends StatelessWidget {
@@ -33,14 +33,14 @@ class ReactiveYaruTextField extends StatelessWidget {
                   ? SizedBox(
                       width: 200,
                       child:
-                          ReactiveTextField(formControlName: formControlName),
+                          ReactiveYaruInput(formControlName: formControlName),
                     )
                   : null,
             ),
             if (!dense)
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: ReactiveTextField(formControlName: formControlName),
+                child: ReactiveYaruInput(formControlName: formControlName),
               ),
           ],
         ),
