@@ -12,10 +12,6 @@ analyzer:
     missing_return: error
     dead_code: error
     invalid_annotation_target: ignore
-    # Flutter 3.47+ deprecates package:flutter/material.dart in favour of
-    # package:material_ui. The app cannot migrate yet: yaru 10.x (theme layer)
-    # is built on flutter/material and yaru 11+ conflicts with file_picker.
-    deprecated_member_use: ignore
     prefer_single_quotes: warning
   exclude:
     - "**/*.g.dart"
