@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:file_picker/file_picker.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_essentials_kit/flutter_essentials_kit.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -142,16 +142,13 @@ class _WelcomePageState extends State<WelcomePage> {
       );
 
   void _pickFile(BuildContext context) async {
-    FilePickerResult? result = await FilePicker.pickFiles(
+    final file = await FilePicker.pickFile(
       allowedExtensions: ['conf'],
     );
+    final path = file?.path;
 
-    if (result?.paths.isNotEmpty ?? false) {
-      final path = result!.paths.first;
-
-      if (!context.mounted) return;
-      context.read<ConfigurationBloc>().load(path!);
-    }
+    if (path == null || !context.mounted) return;
+    context.read<ConfigurationBloc>().load(path);
   }
 
   void _navigateToMain(BuildContext context, TLPConfiguration configuration) =>
